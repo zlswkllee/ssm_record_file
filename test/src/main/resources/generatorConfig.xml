@@ -1,0 +1,50 @@
+<!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+&lt;!&ndash; 配置Run As Maven build : Goals 参数 : mybatis-generator:generate -Dmybatis.generator.overwrite=true &ndash;&gt;
+&lt;!&ndash; 配置 tableName,使用 Run As Maven build 生成 dao model 层 &ndash;&gt;
+<generatorConfiguration>
+    &lt;!&ndash; 配置文件路径
+    <properties url="${mybatis.generator.generatorConfig.properties}"/>&ndash;&gt;
+
+    &lt;!&ndash;数据库驱动包路径 &ndash;&gt;
+    <classPathEntry location="F:/apache-maven-3.5.4/resp/mysql/mysql-connector-java/5.1.38/mysql-connector-java-5.1.38.jar"/>
+
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        &lt;!&ndash;关闭注释 &ndash;&gt;
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        &lt;!&ndash;数据库连接信息
+            此处需要修改
+        &ndash;&gt;
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/db_profile?characterEncoding=utf-8" userId="root"
+                        password="123456">
+        </jdbcConnection>
+
+        &lt;!&ndash;生成的pojo 包路径 &ndash;&gt;
+        <javaModelGenerator targetPackage="com.qf.pojo" targetProject="src/main/java">
+            <property name="enableSubPackages" value="ture"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        &lt;!&ndash;生成xml mapper文件 路径 &ndash;&gt;
+        <sqlMapGenerator targetPackage="com.qf.mapper" targetProject="src/main/java">
+            <property name="enableSubPackages" value="ture"/>
+        </sqlMapGenerator>
+
+        &lt;!&ndash; 生成的mapper接口 的包路径 &ndash;&gt;
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.qf.mapper" targetProject="src/main/java">
+            <property name="enableSubPackages" value="ture"/>
+        </javaClientGenerator>
+
+        &lt;!&ndash;对应数据库表名，多个表，请复制指定 &ndash;&gt;
+        <table tableName="user"></table>
+        <table tableName="profile"></table>
+
+    </context>
+</generatorConfiguration>-->
